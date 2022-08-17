@@ -31,18 +31,12 @@ conserve the same label as the original training sample.
 ![image](https://user-images.githubusercontent.com/93417422/185061597-07888b19-dd80-464b-86e3-d8f6024cce89.png)
 
 We have also plotted Wave Plots and Spectrograms for audio signals.
+![image](https://user-images.githubusercontent.com/93417422/185061906-d364eacf-640b-4e6d-89f1-aae7ccf69df5.png)
 
-The above figure represents fear emotion. Some pitch and frequency
-differences can be observed from here. Similarly, we can find waveplots
-and spectrograms of other emotions as well.
-• Waveplots - Waveplots let us know the loudness of the audio at a
-given time.
-• Spectrograms - A spectrogram is a visual representation of the
-spectrum of frequencies of sound or other signals as they vary with
-time. It’s a representation of frequencies changing with respect to
-time for given audio/music signals.
-13 | P a g e
-Feature Extraction
+The above figure represents fear emotion. Some pitch and frequency differences can be observed from here. Similarly, we can find waveplots and spectrograms of other emotions as well.
+• Waveplots - Waveplots let us know the loudness of the audio at a given time.
+• Spectrograms - A spectrogram is a visual representation of the spectrum of frequencies of sound or other signals as they vary with time. It’s a representation of frequencies changing with respect to time for given audio/music signals.
+### Feature Extraction
 Extraction of features is a very important part in analysing and finding
 relations between different things. As we already know that the data
 provided of audio cannot be understood by the models directly so we
@@ -50,6 +44,8 @@ need to convert them into an understandable format for which feature
 extraction is used.
 The audio signal is a three-dimensional signal in which three axes
 represent time, amplitude and frequency.
+![image](https://user-images.githubusercontent.com/93417422/185062349-5004cba7-2b16-4bae-a468-e386fc5cb9fb.png)
+
 With the help of the sample rate and the sample data, one can perform
 several transformations on it to extract valuable features out of it. Here
 we have done the following feature extractions: -
@@ -63,13 +59,12 @@ pitch class profiles between audio signals.
 cepstral representation where the frequency bands are not linear
 but distributed according to the mel-scale.
 4. RMS - It is the root mean square value.
-14 | P a g e
 5. MEL Spectrogram - It is a spectogram where the frequencies are
 converted to MEL scale.
-Data Processing
+### Data Processing
 • After extracting the features we have normalized the data.
 • Then we have split our data for training and testing.
-Evidence of Activity: Modeling
+### Evidence of Activity: Modeling
 Based on the features that we have extracted, we are going to classify
 the emotions by modeling. We have done CONV1D model which is a
 machine learning technique. The convolutional layer learns local
@@ -80,5 +75,3 @@ same weights, sliding them along 1 dimensions). It is a sequential
 modeling.
 The graph below represents the loss, accuracy, validation loss and
 validation accuracy of the model.
-15 | P a g e
-What went right, what didn’t go right?
