@@ -75,3 +75,25 @@ same weights, sliding them along 1 dimensions). It is a sequential
 modeling.
 The graph below represents the loss, accuracy, validation loss and
 validation accuracy of the model.
+![image](https://user-images.githubusercontent.com/93417422/185062738-3783d8c6-8236-47b2-b2e4-f17f47173b53.png)
+
+## Conclusion
+We have achieved the main objective of the project that is to identify
+emotion of a person using convolutional neural networks with Conv1D
+model. The feature used in this model is MFCC, chroma_stft, mean zero
+and is extracted using librosa package. The extracted values are given
+as input to developed Conv1D model which uses these features and
+give the final predicted emotion. The overall accuracy obtained in this
+model is 98.8%. Furthermore, the accuracy of model can be improved
+by clearing random silence from audio clip and adding more data volume
+by finding more annotated audio clips.
+## Future enhancement
+It can be used to develop equipment to help disabled people. This model can be
+used by various apps and online websites so that they can know the users
+emotions and incorporate new techniques to improve user experience to gain
+profits. This system can also be used in call-canters for complaints and also in
+voice based virtual assistants or chat box.
+In future, we can try implementing this in different modelling techniques and
+compare the results. We can also model with different datasets like Ravdees,
+Savee, Crema-D datasets.
+
