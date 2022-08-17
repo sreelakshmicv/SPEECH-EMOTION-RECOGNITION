@@ -11,3 +11,74 @@ Emotions play an extremely important role in human mental life. It is a medium o
 3. It can also be used in-car board systems based on information of the mental state of the driver can be provided to the system to initiate his/her safety preventing accidents from happening.
 ## About the dataset
 The data set is extracted from Kaggle and the name of the data set is Toronto emotional speech set(TESS). There are a set of 200 target words were spoken in the carrier phrase "Say the word _' by two actresses (aged 26 and 64 years) and recordings were made of the set portraying each of seven emotions (anger, disgust, fear, happiness, pleasant surprise, sadness, and neutral). There are 2800 data points (audio files) in total. The dataset is organized such that each of the two female actors and their emotions are contained within its own folder. And within that, all 200 target words audio files can be found. The format of the audio file is a WAV format.
+## Methodology
+### Data Collection
+• We have collected the data from Kaggle.
+• The data that we got is in audio format. So, there was no need for
+cleaning.
+### Data Augmentation
+• Data augmentation is the process by which we create new
+synthetic data samples by adding small perturbations on our initial
+training set.
+• To generate syntactic data for audio, we can apply noise injection,
+shifting time, changing pitch and stretch.
+• The objective is to make our model invariant to those perturbations
+and enhance its ability to generalize.
+• In order for this to do this work, adding the perturbations must
+conserve the same label as the original training sample.
+### Data Exploration
+• We have plotted Countplot to recognize the count of emotions.
+![image](https://user-images.githubusercontent.com/93417422/185061597-07888b19-dd80-464b-86e3-d8f6024cce89.png)
+
+We have also plotted Wave Plots and Spectrograms for audio signals.
+
+The above figure represents fear emotion. Some pitch and frequency
+differences can be observed from here. Similarly, we can find waveplots
+and spectrograms of other emotions as well.
+• Waveplots - Waveplots let us know the loudness of the audio at a
+given time.
+• Spectrograms - A spectrogram is a visual representation of the
+spectrum of frequencies of sound or other signals as they vary with
+time. It’s a representation of frequencies changing with respect to
+time for given audio/music signals.
+13 | P a g e
+Feature Extraction
+Extraction of features is a very important part in analysing and finding
+relations between different things. As we already know that the data
+provided of audio cannot be understood by the models directly so we
+need to convert them into an understandable format for which feature
+extraction is used.
+The audio signal is a three-dimensional signal in which three axes
+represent time, amplitude and frequency.
+With the help of the sample rate and the sample data, one can perform
+several transformations on it to extract valuable features out of it. Here
+we have done the following feature extractions: -
+1. Mean Zero (Zero crossing rate) - The rate of sign-changes of the
+signal during the duration of a particular frame.
+2. Chroma stft - The Chroma value of an audio basically represents
+the intensity of the twelve distinctive pitch classes that are used to
+study music. They can be employed in the differentiation of the
+pitch class profiles between audio signals.
+3. MFCC - MFCCs Mel Frequency Cepstral Coefficients form a
+cepstral representation where the frequency bands are not linear
+but distributed according to the mel-scale.
+4. RMS - It is the root mean square value.
+14 | P a g e
+5. MEL Spectrogram - It is a spectogram where the frequencies are
+converted to MEL scale.
+Data Processing
+• After extracting the features we have normalized the data.
+• Then we have split our data for training and testing.
+Evidence of Activity: Modeling
+Based on the features that we have extracted, we are going to classify
+the emotions by modeling. We have done CONV1D model which is a
+machine learning technique. The convolutional layer learns local
+patterns of data in convolutional neural networks. It helps to extract the
+features of input data to provide the output. CONV1D is used when you
+slide your convolution kernels along 1 dimension (i.e. you reuse the
+same weights, sliding them along 1 dimensions). It is a sequential
+modeling.
+The graph below represents the loss, accuracy, validation loss and
+validation accuracy of the model.
+15 | P a g e
+What went right, what didn’t go right?
